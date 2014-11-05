@@ -27,7 +27,12 @@
                        placeholder="enter your GitHub user name" ng-model="userName"/>
             </p>
 
-            <p><button class="btn btn-primary" ng-click="getRepos()">Get Repos</button></p>
+            <p>
+                <button class="btn btn-primary" ng-click="getRepos()">Get Repos</button>
+                <img src="img/ajax-loader.gif" alt="loading" ng-if="loading"/>
+            </p>
+
+
 
             <ul>
                 <li ng-repeat="repo in repos">
