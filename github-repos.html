@@ -19,6 +19,9 @@
     <body>
         <main class="container-fluid" ng-app="GitHubApp" ng-controller="GitHubController">
             <h1>GitHub Repos</h1>
+
+            <p class="alert alert-danger" ng-if="errorMessage">{{errorMessage}}</p>
+
             <p>
                 <input type="text" class="form-control"
                        placeholder="enter your GitHub user name" ng-model="userName"/>
